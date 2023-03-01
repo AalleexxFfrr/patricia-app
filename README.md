@@ -1,8 +1,8 @@
 # Patricia 1.0.0.
 ## Collaborators: 
-Dmitrii Ivanushkin - Frontend, Backend
-Aleksandr Dmitriev - Backend, DevOps
-Alina Belevitskaia - UI/UX
++ Dmitrii Ivanushkin - Frontend, Backend
++ Aleksandr Dmitriev - Backend, DevOps
++ Alina Belevitskaia - UI/UX
 ## List of tools:
 ### Fullstack for web:
 + MongoDB,
