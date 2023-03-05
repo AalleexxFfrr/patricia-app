@@ -8,10 +8,21 @@ pipeline {
     }
 
     stage('Front-end React test') {
-      steps {
-        sh 'cd frontend'
-        sh 'npm ci'
-        sh 'npm start'
+      parallel {
+        stage('Front-end React test') {
+          steps {
+            sh 'cd frontend'
+            sh 'npm ci'
+            sh 'npm start'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'cd frontend && npm ci && npm start'
+          }
+        }
+
       }
     }
 
