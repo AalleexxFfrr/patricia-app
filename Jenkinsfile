@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-
     stage('Checkout Code') {
       steps {
         git(url: 'https://github.com/AalleexxFfrr/patricia-app', branch: 'main')
@@ -12,8 +11,9 @@ pipeline {
       steps {
         sh 'cd frontend'
         sh 'npm start'
+        sh 'npm ci'
       }
-    }  
+    }
 
   }
 }
