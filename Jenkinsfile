@@ -9,9 +9,9 @@ pipeline {
 
     stage('Front-end React test') {
       steps {
+        sh 'npm ci'
         sh 'cd frontend'
         sh 'npm start'
-        sh 'npm ci'
       }
     }
 
