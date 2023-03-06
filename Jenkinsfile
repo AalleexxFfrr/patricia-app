@@ -9,7 +9,10 @@ pipeline {
 
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        dir(path: 'frontend') {
+          sh 'npm install'
+        }
+
       }
     }
 
