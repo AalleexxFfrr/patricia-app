@@ -11,12 +11,14 @@ pipeline {
       parallel {
         stage('Front-end React test') {
           steps {
-                dir('frontend') {
-                    sh 'npm install'
-                    sh 'npm start'
-                }
+            dir(path: 'frontend') {
+              sh 'npm ci'
+              sh 'npm start'
             }
+
+          }
         }
+
       }
     }
 
