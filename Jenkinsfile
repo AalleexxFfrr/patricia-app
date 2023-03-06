@@ -7,20 +7,6 @@ pipeline {
       }
     }
 
-    stage('Front-end React test') {
-      parallel {
-        stage('Front-end React test') {
-          steps {
-            dir(path: 'frontend') {
-              sh 'npm ci'
-              sh 'npm start'
-            }
-
-          }
-        }
-
-      }
-    }
     stage('Build') {
         steps {
           dir(path: 'frontend') {
