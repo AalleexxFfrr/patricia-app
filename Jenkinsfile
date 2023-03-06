@@ -21,6 +21,20 @@ pipeline {
 
       }
     }
+  stage('Build') {
+      steps {
+        dir(path: 'frontend') {
+          sh 'npm ci'
+          sh 'npm run build'
+        }
+      }
+    }
 
+    stage('Start') {
+      steps {
+        dir(path: 'frontend') {
+          sh 'npm start'
+        }
+    }
   }
 }
