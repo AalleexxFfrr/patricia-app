@@ -16,8 +16,7 @@ jobs:
       working-directory: frontend
       run: npm ci
 
-    - name: Build and run
+    - name: Run
       working-directory: frontend
-      run: |
-        npm run build
+      run:
         npm start
