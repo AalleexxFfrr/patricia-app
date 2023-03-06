@@ -12,7 +12,7 @@ pipeline {
         stage('Front-end React test') {
           steps {
                 dir('frontend') {
-                    sh 'npm ci'
+                    sh 'npm install'
                     sh 'npm start'
                 }
             }
