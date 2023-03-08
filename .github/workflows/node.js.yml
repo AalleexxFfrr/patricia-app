@@ -59,3 +59,5 @@ jobs:
         with:
           push: true
           tags: AalleexxFfrr/patricia-app:latest
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
