@@ -15,11 +15,11 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Change directory
-      run: cd frontend
-    
     - name: Checkout
       uses: actions/checkout@v3
+      
+    - name: Change directory
+      run: cd frontend
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
