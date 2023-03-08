@@ -37,6 +37,8 @@ jobs:
       run: npm run build --if-present
       
   docker:
+    needs: build
+  
     runs-on: ubuntu-latest
     
     steps:
