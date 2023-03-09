@@ -8,7 +8,7 @@ WORKDIR /patricia-app
 COPY . /patricia-app
 
 # Install dependencies
-RUN cd frontend && npm ci
+RUN cd frontend && npm install
 
 # Build app
 RUN cd frontend && npm run build --if-present
