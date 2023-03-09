@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:latest
+FROM ubuntu:latest 
 COPY . /patricia-app
-RUN make /patricia-app
-CMD python /patricia-app/patricia-app.py
+WORKDIR /patricia-app
+RUN make
+CMD python app.py
