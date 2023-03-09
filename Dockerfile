@@ -4,14 +4,14 @@ FROM node:14-alpine
 # Set the working directory to /app
 WORKDIR /patricia-app/frontend
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./frontend
+# Copy your application code to the container
+COPY . /patricia-app
 
 # Install dependencies
-RUN npm ci
+RUN cd frontend && npm ci
 
-# Copy the rest of the application files to the working directory
-COPY . .
+# Build app
+RUN cd frontend && npm run build --if-present
 
 # Set the environment variable for the app
 ENV NODE_ENV=production
