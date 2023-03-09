@@ -2,7 +2,7 @@
 FROM node:14-alpine
 
 # Set the working directory to /app
-WORKDIR /patricia-app/frontend
+WORKDIR /patricia-app
 
 # Copy your application code to the container
 COPY . /patricia-app
