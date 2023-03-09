@@ -2,22 +2,19 @@
 FROM node:16-alpine
 
 # Set the working directory to /app
-WORKDIR /patricia-app
+WORKDIR /frontend
 
 # Copy your application code to the container
-COPY . /patricia-app
+COPY frontend/ .
 
 # Install dependencies
-RUN cd frontend && npm install
-
-# Build app
-RUN cd frontend && npm run build --if-present
+RUN npm install
 
 # Set the environment variable for the app
 ENV NODE_ENV=production
 
-# Expose port 3000 for the app
-EXPOSE 3000
-
 # Start the app
 CMD ["npm", "start"]
+
+# Expose port 3000 for the app
+EXPOSE 3000
