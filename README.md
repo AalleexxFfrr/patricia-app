@@ -17,7 +17,7 @@ Patricia is a comprehensive web application designed to streamline your life by 
 
 **Client:** React, TailwindCSS
 
-**Server:** Node.js, Express.js, MongoDB
+**Server:** Golang, PostgreSQL
 
 **Infrastructure as Code:** Docker, Kubernetes, Terraform, Ansible
 
